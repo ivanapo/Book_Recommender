@@ -1,0 +1,10 @@
+.container.proba {
+    width: 100%;
+    max-width: unset;
+    padding: 0;
+}
+
+nav{
+    padding-left: 10px;
+    padding-right: 10px;
+}

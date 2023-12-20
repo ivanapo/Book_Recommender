@@ -1,0 +1,106 @@
+.container {
+    margin: auto;
+    padding: 20px;
+}
+
+/* Style the card titles */
+.card-title {
+    font-weight: bold;
+}
+
+
+.text-left{
+ padding:  0 ;
+ margin: 0;
+}
+
+
+
+.filter-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .filter-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+  
+  label {
+    margin-right: 10px;
+    font-weight: bold;
+    margin-left: 20px;
+  }
+  
+  select {
+    padding: 8px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 4px;
+
+  }
+  
+  #dropdown2 {
+    width: 70px;
+  }
+  
+  select:hover {
+    cursor: pointer;
+  }
+  
+  select:focus {
+    outline: none;
+  }
+
+  .fixed-height-card{
+    height: 600px;
+  }
+
+  .card-body{
+    overflow: auto;
+
+    /* Style the scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #fff;
+
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+    }
+    
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #999;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background-color: #fff;
+    }
+}
+
+.defaultStar{
+  position: relative;
+  display: inline-block;
+  color:gray;
+  font-size: 30px;
+}
+
+.paintedStar{
+  position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    color: yellow;
+}
+
+
+.card-img-top{
+  min-height: 400px;
+  max-height: 400px;
+}

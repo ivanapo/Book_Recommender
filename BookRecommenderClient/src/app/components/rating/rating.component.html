@@ -1,0 +1,22 @@
+<form [formGroup]="myForm" (ngSubmit)="postReview()">
+
+  <h1>Book: {{inputData.title}}</h1>
+
+  <div mat-dialog-content>
+    <mat-form-field class="example-full-width">
+      <mat-label>Leave a comment</mat-label>
+      <textarea formControlName="description" matInput placeholder="Ex. It makes me feel..."></textarea>
+    </mat-form-field>
+  </div>
+
+  <div>
+    <ngb-rating [max]="5" formControlName="rating"></ngb-rating>
+  </div>
+
+  <div mat-dialog-actions class="buttons">
+    <button mat-raised-button class="btn btn-outline-dark flex-shrink-0 float-right" type="submit" color="primary">Close</button>
+    <button mat-raised-button class="btn btn-outline-dark flex-shrink-0 float-right" type="close" (click)="closePopup()"  color="primary">Save</button>
+    <!-- <a (click)="postReview()" mat-raised-button color="warn">Close</a> -->
+    <!-- <button mat-raised-button [mat-dialog-close]="closemessage" color="accent">Cancel</button> -->
+  </div>
+</form>

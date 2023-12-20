@@ -1,0 +1,32 @@
+/* .filled{
+    color: yellow;
+} */
+
+.defaultStar{
+    position: relative;
+    display: inline-block;
+    color:gray;
+    font-size: 30px;
+}
+
+.paintedStar{
+    position: absolute;
+      display: inline-block;
+      overflow: hidden;
+      color: yellow;
+}
+
+ .rating-container{
+ padding-top: 20px;
+} 
+.review{
+    margin-top: 50px;
+}
+
+.favorite-btn{    
+    margin-left: 15px;
+}
+
+.rating-container{ 
+    overflow:hidden;
+}

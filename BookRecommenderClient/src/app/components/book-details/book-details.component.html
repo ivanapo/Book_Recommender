@@ -1,0 +1,72 @@
+<app-navbar></app-navbar>
+
+<div class="container px-4 px-lg-5 my-5 ">
+  <div class="row gx-4 gx-lg-5 align-items-center">
+    <div class="col-md-4"><img class="card-img-top mb-5 mb-md-0" [src]='book?.imageUrl!' alt="..." /></div>
+    <div class="col-md-6">
+      <h1 class="display-5 fw-bolder">{{book?.title}}</h1>
+      <div class="fs-5 mb-5">
+        <span>{{"Author: "+book?.author}}</span>
+        <div class="rating-container">
+          <ngb-rating [max]="5" [(rate)]="averageRating" [readonly]="true">
+            <ng-template let-fill="fill">
+              <span class="defaultStar" [class.filled]="fill === 100">
+                <span class="paintedStar" [style.width.%]="fill">&#9733;</span>&#9733;
+              </span>
+            </ng-template>
+          </ngb-rating>
+        </div>
+      </div>
+
+      <p class="lead">An extraordinary literary work crafted by a gifted author, {{book?.author}}, and brought to the
+        world by the renowned publishing house, {{book?.publisher}}, in the memorable year of {{book?.yearOfPublication}}.
+        This captivating book seamlessly weaves together intricate plotlines and compelling characters, offering readers
+        an immersive journey into the depths of human emotion, knowledge, and imagination.
+      </p>
+
+      <div class="d-flex buttons" *ngIf="user">
+
+        <button class="btn btn-outline-dark flex-shrink-0 mat-raised-button" type="button" (click)="openDialog()">
+          <i class="bi bi-chat-right-text-fill me-1"></i>
+          Add review
+        </button>
+
+        <button class="btn btn-outline-dark flex-shrink-0 mat-raised-button favorite-btn" type="button"
+          (click)="addFavourite()">
+          Favourite
+          <i class="bi bi-heart-fill"></i>
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="review">
+    <div class="Reviews" *ngIf="book">
+      <h1>Reviews</h1>
+      <hr>
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-xl-3" *ngFor="let ratings of book.ratings">
+          <div class="card mb-4 ">
+            <div class="card-body">
+              <h5 class="card-title">User: {{ ratings.userProvisionId }}</h5>
+              <p class="card-text">Description: {{ ratings.description }}</p>
+              <p class="card-text">Rating: {{ ratings.rating }}</p>
+              <div class="rating-container">
+
+                <ngb-rating [max]="5" [rate]="ratings.rating" [readonly]="true">
+                  <ng-template let-fill="fill">
+                    <span class="defaultStar" [class.filled]="fill === 100">
+                      <span class="paintedStar" [style.width.%]="fill">&#9733;</span>&#9733;
+                    </span>
+                  </ng-template>
+                </ngb-rating>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

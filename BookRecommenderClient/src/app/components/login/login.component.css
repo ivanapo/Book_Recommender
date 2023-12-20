@@ -1,0 +1,10 @@
+  .section-background {
+    background-image: url(../../../assets/login-image.jpg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }

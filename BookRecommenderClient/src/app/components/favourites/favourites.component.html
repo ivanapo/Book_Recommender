@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="my-4">
+        <h1 class="text-left">Favourite Books:</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3" *ngFor="let book of user?.orderedBooks">
+            <div class="card mb-4 fixed-height-card">
+                <a [routerLink]="['/book', book.id]"> <img [src]="book.imageUrl" class="card-img-top"> </a>
+                <div class="card-body">
+                    <h5 class="card-title">Title: {{ book.title }}</h5>
+                    <p class="card-text">Author: {{ book.author }}</p>
+                    <p class="card-text">publisher: {{ book.publisher }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

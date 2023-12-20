@@ -1,0 +1,22 @@
+ngb-rating{
+    color: yellow;
+    font-size: 50px;
+    margin-left: 20px;
+}
+
+h1 {
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+
+.example-full-width {
+    width: 85%;
+    height: 150px
+  }
+
+  .buttons{
+    margin-top: 10px;
+    justify-content: space-between;
+  }
+
